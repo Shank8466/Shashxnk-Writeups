@@ -1,6 +1,6 @@
 # My Security Writeups
 
-Sanitized pentest & lab writeups. Each writeup is educational and redacted to remove platform-specific flags, IPs, and any sensitive data.
+Pentest & lab writeups. Each writeup is educational and redacted to remove platform-specific flags, IPs, and any sensitive data.
 
 ## Structure
 - `writeups/tryhackme/` — TryHackMe writeups
