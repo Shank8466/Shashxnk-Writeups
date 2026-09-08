@@ -10,7 +10,7 @@ Sanitized pentest & lab writeups. Each writeup is educational and redacted to re
 - `scripts/` — small tools and utilities
 
 ## How I publish
-- All writeups are sanitized: placeholders replace IPs/flags, and no private keys are committed.
+- All writeups are non sanitized: placeholders IPs/flags, and no private keys are committed.
 - Detailed, technical writeups include commands (placeholders), logic, mitigation advice, and lessons learned.
 
 ## Best writeups
