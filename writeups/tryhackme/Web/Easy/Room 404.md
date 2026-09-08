@@ -45,26 +45,26 @@ The Byte Lotus guest-experience platform went live in a hurry, and the night-shi
 - 
 ```
 
-![[Pasted image 20260831121733.png]]
+![Pasted image 20260831121733](../../../../Images/Pasted%20image%2020260831121733.png)
 
 ```
 - After nmap scan i have got the git repository so maybe we can try to dump this on our machine to find the flag.
 ```
 
-![[Pasted image 20260831122210.png]]
+![Pasted image 20260831122210](../../../../Images/Pasted%20image%2020260831122210.png)
 
 ```
 
 ```
 
-![[Pasted image 20260831122429.png]]
+![Pasted image 20260831122429](../../../../Images/Pasted%20image%2020260831122429.png)
 
 ```
 - After Dumping all the git leaks i listed the diirectory and checking here and there i found the flag in README.md
 ```
 
-![[Pasted image 20260831122624.png]]
+![Pasted image 20260831122624](../../../../Images/Pasted%20image%2020260831122624.png)
 
-![[Pasted image 20260831122648.png]]
+![Pasted image 20260831122648](../../../../Images/Pasted%20image%2020260831122648.png)
 
 ---

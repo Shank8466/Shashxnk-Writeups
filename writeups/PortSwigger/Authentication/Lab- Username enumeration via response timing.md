@@ -30,7 +30,7 @@
 - So to exploit this first we have to intercept the request or check in http history and send it to repeater.
 ```
 
-![[Pasted image 20260310123841.png]]
+![Pasted image 20260310123841](../../../Images/Pasted%20image%2020260310123841.png)
 
 ```
 - So in repeater when user is entering its username and password. In the right most corner we can see 361 mills. so the logic is if username is correct so the site checks for password and milliseconds starts to increase.
@@ -42,12 +42,12 @@
 - In order to exploit this we will use pitchfork attack and we will use 1 to 101 numbers for username in the place of http header and add username given by the lab 
 ```
 
-![[Pasted image 20260310161119.png|216]]
-![[Pasted image 20260310161027.png|216]]
+![216](../../../Images/Pasted%20image%2020260310161119.png)
+![216](../../../Images/Pasted%20image%2020260310161027.png)
 
-![[Pasted image 20260310161223.png]]
+![Pasted image 20260310161223](../../../Images/Pasted%20image%2020260310161223.png)
 
-![[Pasted image 20260310160713.png]]
+![Pasted image 20260310160713](../../../Images/Pasted%20image%2020260310160713.png)
 
 ```
 - So after brute-forcing we can clearly see that for ak username the response received is more than anyone because its checking for password as we saw earlier.
@@ -59,7 +59,7 @@
 - Now to check for pass we must have to check for 302 status code because 302 is for redirection
 ```
 
-![[Pasted image 20260310162137.png]]
+![Pasted image 20260310162137](../../../Images/Pasted%20image%2020260310162137.png)
 
 ```
 - Now Send this req to repeater and we cant login and solve because our ip has been blocked so copy the original request from repeater.
@@ -67,7 +67,7 @@
 - Boom we solved it
 ```
 
-![[Pasted image 20260310162343.png]]
+![Pasted image 20260310162343](../../../Images/Pasted%20image%2020260310162343.png)
 
-![[Pasted image 20260310162411.png]]
+![Pasted image 20260310162411](../../../Images/Pasted%20image%2020260310162411.png)
 

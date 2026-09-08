@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "writeups/tryhackme/Web/Easy/Beach Bar.md",
-                "mode": "preview",
+                "file": "writeups/PortSwigger/SQLI/Lab 3 - SQL injection with filter bypass via XML encoding.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Beach Bar"
+              "title": "Lab 3 - SQL injection with filter bypass via XML encoding"
             }
           }
         ]
@@ -83,7 +83,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "cdb1296eeb26420c",
@@ -188,8 +188,10 @@
       "bases:Create new base": false
     }
   },
-  "active": "b8c82ab6cc27d974",
+  "active": "3af096567ee7c755",
   "lastOpenFiles": [
+    "writeups/PortSwigger/BAC/IDOR/Lab - Insecure direct object references.md",
+    "writeups/tryhackme/Web/Easy/Beach Bar.md",
     "writeups/PortSwigger/XSS/Xss Vuln.md",
     "writeups/PortSwigger/XSS/Reflected Xss/Waf Bypass Xss Lab - 4.md",
     "writeups/PortSwigger/XSS/Reflected Xss/Reflected XSS with some SVG markup allowed Lab - 7.md",
@@ -218,11 +220,9 @@
     "writeups/PortSwigger/BAC/Path Traversal/Lab 4 - File path traversal, traversal sequences stripped with superfluous URL-decode.md",
     "writeups/PortSwigger/BAC/Path Traversal/Lab 3 - File path traversal, traversal sequences stripped non-recursively.md",
     "writeups/PortSwigger/BAC/Path Traversal/Lab 2 - File path traversal, traversal sequences blocked with absolute path bypass.md",
-    "writeups/PortSwigger/BAC/Path Traversal/Explanation of bug.md",
     "writeups/PortSwigger/BAC/Path Traversal",
     "writeups/PortSwigger/BAC/Untitled/desktop.ini",
     "writeups/PortSwigger/BAC/IDOR",
-    "writeups/PortSwigger/BAC/IDOR/Lab - Insecure direct object references.md",
     "convert-images.ps1",
     "Brute It.png",
     "Images/desktop.ini",

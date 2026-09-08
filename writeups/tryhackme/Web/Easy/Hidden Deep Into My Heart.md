@@ -44,9 +44,9 @@ You can find the web application here: http://MACHINE_IP:5000
 - So now i have got a path we can use that for further exploration.
 ```
 
-![[Pasted image 20260907210341.png]]
+![Pasted image 20260907210341](../../../../Images/Pasted%20image%2020260907210341.png)
 
-![[Pasted image 20260907210507.png]]
+![Pasted image 20260907210507](../../../../Images/Pasted%20image%2020260907210507.png)
 
 ```
 - After visiting that path i got this page of secret vault.
@@ -56,11 +56,11 @@ You can find the web application here: http://MACHINE_IP:5000
 - Using gobuster i have got a new path /administrator
 ```
 
-![[Pasted image 20260907210715.png]]
+![Pasted image 20260907210715](../../../../Images/Pasted%20image%2020260907210715.png)
 
-![[Pasted image 20260907210907.png]]
+![Pasted image 20260907210907](../../../../Images/Pasted%20image%2020260907210907.png)
 
-![[Pasted image 20260907211037.png]]
+![Pasted image 20260907211037](../../../../Images/Pasted%20image%2020260907211037.png)
 
 ```
 - In this login page i tried using hydra and all but it didnt worked but in the      robots.txt file there was a password - cupid_arrow_2026!!!
@@ -70,7 +70,7 @@ You can find the web application here: http://MACHINE_IP:5000
   
 ```
 
-![[Pasted image 20260907211449.png]]
+![Pasted image 20260907211449](../../../../Images/Pasted%20image%2020260907211449.png)
 
 ---
 # What i learned from this lab

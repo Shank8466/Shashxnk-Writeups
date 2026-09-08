@@ -24,13 +24,13 @@ To solve the lab, retrieve the contents of the /etc/passwd file.
 Intercept the request of the website and keep forwading till you see this and send request to repeater
 ```
 
-![[Pasted image 20260619210052.png]]
+![Pasted image 20260619210052](../../../../Images/Pasted%20image%2020260619210052.png)
 
 ```
 Enter the payload and now we have successfully solved the lab
 ```
 
-![[Pasted image 20260619210352.png]]
+![Pasted image 20260619210352](../../../../Images/Pasted%20image%2020260619210352.png)
 
 ## How this exploit works
 

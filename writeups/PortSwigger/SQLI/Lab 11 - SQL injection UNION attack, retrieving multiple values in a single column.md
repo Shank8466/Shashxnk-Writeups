@@ -32,14 +32,14 @@ To solve the lab, perform a SQL injection UNION attack that retrieves all userna
 In order to solve this lab first capture the requwst of categoary and send it to repeater. 
 ```
 
-![[Pasted image 20260818135155.png]]
+![Pasted image 20260818135155](../../../Images/Pasted%20image%2020260818135155.png)
 
-![[Pasted image 20260818135220.png]] 
+![Pasted image 20260818135220](../../../Images/Pasted%20image%2020260818135220.png) 
 ```
 Now check how many queries are there in backend of sql by using 'ORDER BY 1--' technique. After doing this we can see that there is 2 query in the backend because after 3 its showing us 500 server error
 ```
 
-![[Pasted image 20260818135628.png]]
+![Pasted image 20260818135628](../../../Images/Pasted%20image%2020260818135628.png)
 
 
 ---
@@ -57,9 +57,9 @@ So as we know that there are two queries in the backend we will add null in the 
 
 ```
 
-![[Pasted image 20260818140317.png]]
+![Pasted image 20260818140317](../../../Images/Pasted%20image%2020260818140317.png)
 
-![[Pasted image 20260818140423.png]]
+![Pasted image 20260818140423](../../../Images/Pasted%20image%2020260818140423.png)
 
 ```
 Now we got the id and password. Just login into the admin account. 
@@ -67,4 +67,4 @@ Its Solved
 ```
 
 
-![[Pasted image 20260818140537.png]]
+![Pasted image 20260818140537](../../../Images/Pasted%20image%2020260818140537.png)

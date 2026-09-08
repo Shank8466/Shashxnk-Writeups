@@ -108,9 +108,9 @@ For **Oracle Databases**:
   https://youtu.be/qm7oIMYzcAo
 ```
 
-![[Pasted image 20260813192927.png]]
+![Pasted image 20260813192927](../../../Images/Pasted%20image%2020260813192927.png)
 
-![[Pasted image 20260813192959.png]]
+![Pasted image 20260813192959](../../../Images/Pasted%20image%2020260813192959.png)
 
 ```
 Get the payload from the SQL cheatsheet and do the url encoding while sending the payload

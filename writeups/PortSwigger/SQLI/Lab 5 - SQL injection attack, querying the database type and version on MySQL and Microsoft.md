@@ -25,13 +25,13 @@ Capture the category request and send to repeater and now add the payload
 same as lab 4 just different payload because its mysql and microsoft
 ```
 
-![[Pasted image 20260814114035.png]]
+![Pasted image 20260814114035](../../../Images/Pasted%20image%2020260814114035.png)
 
-![[Pasted image 20260814114223.png]]
+![Pasted image 20260814114223](../../../Images/Pasted%20image%2020260814114223.png)
 
-![[Pasted image 20260814114247.png]]
+![Pasted image 20260814114247](../../../Images/Pasted%20image%2020260814114247.png)
 
-![[Pasted image 20260814114415.png]] 
+![Pasted image 20260814114415](../../../Images/Pasted%20image%2020260814114415.png) 
 #  **Payloads that worked** (and ones that didn't) 
 
 ```

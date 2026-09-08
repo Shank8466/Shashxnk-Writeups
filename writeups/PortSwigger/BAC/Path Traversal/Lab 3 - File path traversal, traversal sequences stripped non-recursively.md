@@ -26,10 +26,10 @@ To solve the lab, retrieve the contents of the /etc/passwd file.
 Intercept the request of the website and keep forwading till you see this
 ```
 
-![[Pasted image 20260619130731.png]]
+![Pasted image 20260619130731](../../../../Images/Pasted%20image%2020260619130731.png)
 
 ```
 Now send req to repeater and change the parameter of image file in this format so even if website will filter it we can still see the the password
 ```
 
-![[Pasted image 20260619130912.png]]
+![Pasted image 20260619130912](../../../../Images/Pasted%20image%2020260619130912.png)

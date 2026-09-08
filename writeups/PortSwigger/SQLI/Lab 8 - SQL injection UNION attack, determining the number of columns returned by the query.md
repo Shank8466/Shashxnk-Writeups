@@ -25,11 +25,11 @@ To solve the lab, determine the number of columns returned by the query by perfo
 Capture the category request and send it to repeater and now add the payload  
 ```
 
-![[Pasted image 20260814142204.png]]
+![Pasted image 20260814142204](../../../Images/Pasted%20image%2020260814142204.png)
 
-![[Pasted image 20260814142415.png]]
+![Pasted image 20260814142415](../../../Images/Pasted%20image%2020260814142415.png)
 
-![[Pasted image 20260814142439.png]]
+![Pasted image 20260814142439](../../../Images/Pasted%20image%2020260814142439.png)
 
 ```
 Here are the simplified notes from the video explaining how to determine the number of columns returned by a backend SQL query, which is a crucial first step in a Union-based SQL Injection.

@@ -28,17 +28,17 @@ You can log in to your own account using the following credentials: wiener:peter
 - Logging In with given user id and pass and intercepting it burp. After Intercepting what i got is id of a user which i am logging in
 ```
 
-![[Pasted image 20260217021921.png]]
+![Pasted image 20260217021921](../../../../Images/Pasted%20image%2020260217021921.png)
 
 ```
 -  Sending this Get Request to Repeater and changing id from wiener to administrator and boom got the 200 response 
 
 ```
 
-![[Pasted image 20260217022410.png]]
+![Pasted image 20260217022410](../../../../Images/Pasted%20image%2020260217022410.png)
 
 ```
 -  Now Copying the password and will get the access of admin panel and now deleted carlos hence solved the lab
 ```
 
-![[Pasted image 20260217022931.png]]
+![Pasted image 20260217022931](../../../../Images/Pasted%20image%2020260217022931.png)

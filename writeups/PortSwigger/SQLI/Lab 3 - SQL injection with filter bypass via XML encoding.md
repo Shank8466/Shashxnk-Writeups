@@ -25,12 +25,12 @@ The database contains a users table, which contains the usernames and passwords 
 Capture the check stock feature request and send it to repeater and now we have to use a specific extension called hackvertor for XML encoding and now write the payload and send it now its solved
 ```
 
-![[Pasted image 20260813171729.png]]
+![Pasted image 20260813171729](../../../Images/Pasted%20image%2020260813171729.png)
 
-![[Pasted image 20260813171921.png]]
+![Pasted image 20260813171921](../../../Images/Pasted%20image%2020260813171921.png)
 
-![[Pasted image 20260813172021.png]] 
-![[Pasted image 20260813172351.png]] 
+![Pasted image 20260813172021](../../../Images/Pasted%20image%2020260813172021.png) 
+![Pasted image 20260813172351](../../../Images/Pasted%20image%2020260813172351.png) 
 # **Payloads that worked** (and ones that didn't) 
 
 ### UNION-based SQL Injection Payload

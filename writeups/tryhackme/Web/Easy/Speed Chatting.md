@@ -44,9 +44,9 @@ You can find the web application here: http://MACHINE_IP:5000
 - After uploading a file we can see that there is no sanitization
 ```
 
-![[Pasted image 20260824122427.png]]
+![Pasted image 20260824122427](../../../../Images/Pasted%20image%2020260824122427.png)
 
-![[Pasted image 20260824122747.png]]
+![Pasted image 20260824122747](../../../../Images/Pasted%20image%2020260824122747.png)
 
 ```
 - So we can use revserse shell python payload for exploitation.
@@ -207,7 +207,7 @@ Remote machine
 - Now we have successfully got the flag.
 ```
 
-![[Pasted image 20260824125826.png]]
+![Pasted image 20260824125826](../../../../Images/Pasted%20image%2020260824125826.png)
 
 # **Why** the file upload vulnerability exist and how to fix it
 
