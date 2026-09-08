@@ -6,7 +6,6 @@ Sanitized pentest & lab writeups. Each writeup is educational and redacted to re
 - `writeups/tryhackme/` — TryHackMe writeups
 - `writeups/portswigger/` — PortSwigger labs
 - `writeups/htb/` — HTB boxes
-- `screenshots/` — sanitized images
 - `scripts/` — small tools and utilities
 
 ## How I publish
@@ -14,4 +13,4 @@ Sanitized pentest & lab writeups. Each writeup is educational and redacted to re
 - Detailed, technical writeups include commands (placeholders), logic, mitigation advice, and lessons learned.
 
 ## Best writeups
-- [Brute It — THM walkthrough](writeups/tryhackme/2025-10-XX-thm-brute-it.md)
+
