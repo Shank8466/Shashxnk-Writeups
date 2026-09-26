@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "writeups/PortSwigger/SQLI/Lab 3 - SQL injection with filter bypass via XML encoding.md",
+                "file": "writeups/PortSwigger/File Upload Vuln/Lab 2 - Web shell upload via Content-Type restriction bypass.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lab 3 - SQL injection with filter bypass via XML encoding"
+              "title": "Lab 2 - Web shell upload via Content-Type restriction bypass"
             }
           }
         ]
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "writeups/tryhackme/Web/Easy/Beach Bar.md",
+                "file": "writeups/PortSwigger/File Upload Vuln/Lab 2 - Web shell upload via Content-Type restriction bypass.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -190,7 +190,27 @@
   },
   "active": "3af096567ee7c755",
   "lastOpenFiles": [
+    "Pasted image 20260926171957.png",
+    "Images/Pasted image 20260926170153.png",
+    "Images/Pasted image 20260926165934.png",
+    "Images/Pasted image 20260926165824.png",
+    "Images/Pasted image 20260926165644.png",
+    "Images/Pasted image 20260926170701.png",
+    "Images/Screenshot 2026-09-26 165818.png",
+    "Images/Screenshot 2026-06-20 125329 1.png",
+    "Images/Screenshot 2026-09-26 165642.png",
+    "Images/Screenshot 2026-06-20 125329.png",
+    "Images/Pasted image 20260907223514.png",
+    "writeups/PortSwigger/File Upload Vuln/Lab 2 - Web shell upload via Content-Type restriction bypass.md",
+    "writeups/PortSwigger/File Upload Vuln/Explanation of bug.md",
+    "writeups/PortSwigger/BAC/Path Traversal/Lab 6 -File path traversal, validation of start of path.md",
+    "writeups/PortSwigger/BAC/Path Traversal/Lab 3 - File path traversal, traversal sequences stripped non-recursively.md",
+    "writeups/PortSwigger/BAC/Path Traversal/Lab 2 - File path traversal, traversal sequences blocked with absolute path bypass.md",
+    "writeups/PortSwigger/BAC/IDOR/Lab - User ID controlled by request parameter with password disclosure.md",
+    "writeups/PortSwigger/BAC/IDOR/Lab - Multi-step process with no access control on one step.md",
     "writeups/PortSwigger/BAC/IDOR/Lab - Insecure direct object references.md",
+    "writeups/PortSwigger/Authentication/Lab- Username enumeration via response timing.md",
+    "writeups/PortSwigger/SQLI/Lab 3 - SQL injection with filter bypass via XML encoding.md",
     "writeups/tryhackme/Web/Easy/Beach Bar.md",
     "writeups/PortSwigger/XSS/Xss Vuln.md",
     "writeups/PortSwigger/XSS/Reflected Xss/Waf Bypass Xss Lab - 4.md",
@@ -210,31 +230,11 @@
     "writeups/PortSwigger/XSS/DOM Based Xss",
     "writeups/PortSwigger/SQLI/Lab 11 - SQL injection UNION attack, retrieving multiple values in a single column.md",
     "writeups/PortSwigger/SQLI/Lab 8 - SQL injection UNION attack, determining the number of columns returned by the query.md",
-    "writeups/PortSwigger/SQLI/Lab 5 - SQL injection attack, querying the database type and version on MySQL and Microsoft.md",
-    "writeups/PortSwigger/SQLI/Lab 4 - SQL injection attack, querying the database type and version on Oracle.md",
-    "writeups/PortSwigger/SQLI/Lab 3 - SQL injection with filter bypass via XML encoding.md",
-    "writeups/PortSwigger/SQLI/Lab 2 - SQL injection vulnerability allowing login bypass.md",
-    "writeups/PortSwigger/SQLI/Lab 1 - SQL injection vulnerability in WHERE clause allowing retrieval of hidden data.md",
-    "writeups/PortSwigger/BAC/Path Traversal/Lab 6 -File path traversal, validation of start of path.md",
-    "writeups/PortSwigger/BAC/Path Traversal/Lab 5 - File path traversal, validation of file extension with null byte bypass.md",
-    "writeups/PortSwigger/BAC/Path Traversal/Lab 4 - File path traversal, traversal sequences stripped with superfluous URL-decode.md",
-    "writeups/PortSwigger/BAC/Path Traversal/Lab 3 - File path traversal, traversal sequences stripped non-recursively.md",
-    "writeups/PortSwigger/BAC/Path Traversal/Lab 2 - File path traversal, traversal sequences blocked with absolute path bypass.md",
     "writeups/PortSwigger/BAC/Path Traversal",
     "writeups/PortSwigger/BAC/Untitled/desktop.ini",
     "writeups/PortSwigger/BAC/IDOR",
     "convert-images.ps1",
-    "Brute It.png",
     "Images/desktop.ini",
-    "Images/Screenshot 2026-06-20 125329.png",
-    "Images/Screenshot 2026-06-20 125329 1.png",
-    "Images/Pasted image 20260907223514.png",
-    "Images/Pasted image 20260907211449.png",
-    "Images/Pasted image 20260907211037.png",
-    "Images/Pasted image 20260907210907.png",
-    "Images/Pasted image 20260907210905.png",
-    "Images/Pasted image 20260907210715.png",
-    "Images/Pasted image 20260907210507.png",
     "Images"
   ]
 }
