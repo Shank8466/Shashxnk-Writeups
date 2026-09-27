@@ -45,7 +45,7 @@ You can log in to your own account using the following credentials: wiener:peter
 
 ![Pasted image 20260926170153](../../../Images/Pasted%20image%2020260926170153.png)
 
-![](Pasted%20image%2020260926171957.png)
+![](Images/Pasted%20image%2020260926171957.png)
 
 ![Pasted image 20260926170701](../../../Images/Pasted%20image%2020260926170701.png)
 

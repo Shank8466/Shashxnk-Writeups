@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "writeups/PortSwigger/File Upload Vuln/Lab 2 - Web shell upload via Content-Type restriction bypass.md",
-                "mode": "source",
+                "file": "writeups/PortSwigger/File Upload Vuln/Lab 4 - Web shell upload via extension blacklist bypass.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Lab 2 - Web shell upload via Content-Type restriction bypass"
+              "title": "Lab 4 - Web shell upload via extension blacklist bypass"
             }
           }
         ]
@@ -190,17 +190,19 @@
   },
   "active": "3af096567ee7c755",
   "lastOpenFiles": [
-    "Pasted image 20260926171957.png",
-    "Images/Pasted image 20260926170153.png",
-    "Images/Pasted image 20260926165934.png",
-    "Images/Pasted image 20260926165824.png",
-    "Images/Pasted image 20260926165644.png",
-    "Images/Pasted image 20260926170701.png",
-    "Images/Screenshot 2026-09-26 165818.png",
-    "Images/Screenshot 2026-06-20 125329 1.png",
-    "Images/Screenshot 2026-09-26 165642.png",
-    "Images/Screenshot 2026-06-20 125329.png",
-    "Images/Pasted image 20260907223514.png",
+    "Images/Pasted image 20260926214616.png",
+    "Images/Pasted image 20260926214600.png",
+    "Images/Pasted image 20260926214416.png",
+    "Images/Pasted image 20260926214320.png",
+    "writeups/PortSwigger/File Upload Vuln/Lab 3 - Web shell upload via path traversal.md",
+    "writeups/PortSwigger/File Upload Vuln/Lab 4 - Web shell upload via extension blacklist bypass.md",
+    "Images/Pasted image 20260926171957.png",
+    "Images/Drawing 2026-02-27 00.29.08.excalidraw.md",
+    "Images/Pasted image 20260926195253.png",
+    "Images/Pasted image 20260926195116.png",
+    "Images/Pasted image 20260926194713.png",
+    "Images/Pasted image 20260926194355.png",
+    "Images/Pasted image 20260926195620.png",
     "writeups/PortSwigger/File Upload Vuln/Lab 2 - Web shell upload via Content-Type restriction bypass.md",
     "writeups/PortSwigger/File Upload Vuln/Explanation of bug.md",
     "writeups/PortSwigger/BAC/Path Traversal/Lab 6 -File path traversal, validation of start of path.md",
@@ -226,10 +228,7 @@
     "writeups/PortSwigger/XSS/DOM Based Xss/DOM-Based XSS in document.write Sink via location.search Source lab - 9.md",
     "writeups/PortSwigger/XSS/DOM Based Xss/DOM XSS in innerHTML sink using source location.search - 10.md",
     "writeups/PortSwigger/XSS/DOM Based Xss/DOM XSS in AngularJS expression with angle brackets and double quotes HTML-encoded - 3.md",
-    "writeups/PortSwigger/XSS/DOM Based Xss/DOM Stored XSS Lab-8.md",
     "writeups/PortSwigger/XSS/DOM Based Xss",
-    "writeups/PortSwigger/SQLI/Lab 11 - SQL injection UNION attack, retrieving multiple values in a single column.md",
-    "writeups/PortSwigger/SQLI/Lab 8 - SQL injection UNION attack, determining the number of columns returned by the query.md",
     "writeups/PortSwigger/BAC/Path Traversal",
     "writeups/PortSwigger/BAC/Untitled/desktop.ini",
     "writeups/PortSwigger/BAC/IDOR",
