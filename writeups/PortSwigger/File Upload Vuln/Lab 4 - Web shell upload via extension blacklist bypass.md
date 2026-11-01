@@ -45,6 +45,7 @@ You can log in to your own account using the following credentials: wiener:peter
 
 ![Pasted image 20260926214416](../../../Images/Pasted%20image%2020260926214416.png)
 
+
 ```
 - After this copy url open image in new tab and we have got the flag.
 ```
