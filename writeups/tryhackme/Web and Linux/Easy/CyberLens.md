@@ -86,7 +86,7 @@ Nmap done: 1 IP address (1 host up) scanned in 34.37 seconds
 - There is one http server is running on port 80 so after visiting i got this site.
 ```
 
-![[Pasted image 20261029212704.png]]
+![Pasted image 20261029212704](../../../../Images/Pasted%20image%2020261029212704.png)
 
 ```
 - So tried to run gobuster on this site for directory discovery.
@@ -356,7 +356,7 @@ msf >
 
 ```
 
-![[Pasted image 20261029224043.png]]
+![Pasted image 20261029224043](../../../../Images/Pasted%20image%2020261029224043.png)
 
 ```
 - We got the access now what we have to do is try to get the flag and this is windows privelege escalation.
@@ -364,9 +364,9 @@ msf >
 
 ```
 
-![[Pasted image 20261029224633.png]]
+![Pasted image 20261029224633](../../../../Images/Pasted%20image%2020261029224633.png)
 
-![[Pasted image 20261029224658.png]]
+![Pasted image 20261029224658](../../../../Images/Pasted%20image%2020261029224658.png)
 
 ```
 - After changing into many dir i got this dir known as Desktop and found the user flag - THM{T1k4-CV3-f0r-7h3-w1n}
@@ -378,15 +378,15 @@ msf >
 - Now we have to get root access so instead of using winpeas we can use exploit suggester of msf console once getting into background session.
 ```
 
-![[Pasted image 20261029230935.png]]
+![Pasted image 20261029230935](../../../../Images/Pasted%20image%2020261029230935.png)
 
-![[Pasted image 20261029231013.png]]
+![Pasted image 20261029231013](../../../../Images/Pasted%20image%2020261029231013.png)
 
-![[Pasted image 20261029231210.png]]
+![Pasted image 20261029231210](../../../../Images/Pasted%20image%2020261029231210.png)
 
-![[Pasted image 20261029231222.png]]
+![Pasted image 20261029231222](../../../../Images/Pasted%20image%2020261029231222.png)
 
-![[Pasted image 20261029232003.png]]
+![Pasted image 20261029232003](../../../../Images/Pasted%20image%2020261029232003.png)
 
 ```
 - In this image we got a exploit so we are going to use that.
@@ -397,7 +397,7 @@ msf >
 - Hence we got the root access.
 ```
 
-![[Pasted image 20261029232111.png]]
+![Pasted image 20261029232111](../../../../Images/Pasted%20image%2020261029232111.png)
 
 ```
 - We got the flag too.

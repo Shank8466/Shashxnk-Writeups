@@ -29,11 +29,11 @@ Can you read the flag at http://10.48.186.49:8080/flag.txt?
 - Also there is one more directory Which says 401 authorized and here is the flag stored.
 ```
 
-![[Pasted image 20261008013632.png]]
+![Pasted image 20261008013632](../../../../Images/Pasted%20image%2020261008013632.png)
 
-![[Pasted image 20261008013959.png]]
+![Pasted image 20261008013959](../../../../Images/Pasted%20image%2020261008013959.png)
 
-![[Pasted image 20261008014422.png]]
+![Pasted image 20261008014422](../../../../Images/Pasted%20image%2020261008014422.png)
 
 ```
 - So wrote a js script using chatgpt 

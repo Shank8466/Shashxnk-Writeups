@@ -88,9 +88,9 @@ Starting gobuster in directory enumeration mode
 
 ```
 
-![[Pasted image 20261029142353.png]]
+![Pasted image 20261029142353](../../../../Images/Pasted%20image%2020261029142353.png)
 
-![[Pasted image 20261029142813.png]]
+![Pasted image 20261029142813](../../../../Images/Pasted%20image%2020261029142813.png)
 
 ---
 # 3. Initial Access
@@ -132,10 +132,10 @@ msf >
 
 ```
 
-![[Pasted image 20261029143511.png]]
-=![[Pasted image 20261029143653.png]]
+![Pasted image 20261029143511](../../../../Images/Pasted%20image%2020261029143511.png)
+=![Pasted image 20261029143653](../../../../Images/Pasted%20image%2020261029143653.png)
 
-![[Pasted image 20261029144036.png]]
+![Pasted image 20261029144036](../../../../Images/Pasted%20image%2020261029144036.png)
 
 ---
 # 4. Privilege Escalation
@@ -144,7 +144,7 @@ msf >
 - After getting shell we can try for privilege escalation.
 ```
 
-![[Pasted image 20261029144332.png]]
+![Pasted image 20261029144332](../../../../Images/Pasted%20image%2020261029144332.png)
 
 ```
 - so i changed directory to /home and there was directory think so i went into it and got the user flag and now we have to escalate privelege to root.
@@ -152,13 +152,13 @@ msf >
 - I tried sudo -l what kind permissions we have as a normal user.
 ```
 
-![[Pasted image 20261029144438.png]]
+![Pasted image 20261029144438](../../../../Images/Pasted%20image%2020261029144438.png)
 
 ```
 - After trying sudo -l we didnt got any permissions to run but there is a dir named as .ssh so i opened it
 ```
 
-![[Pasted image 20261029145636.png]]
+![Pasted image 20261029145636](../../../../Images/Pasted%20image%2020261029145636.png)
 
 ```
 - Once getting the key i downloaded it in my main machine and changed the permission to execute it in order to get the ssh connection.
@@ -176,13 +176,13 @@ msf >
 
 ```
 
-![[Pasted image 20261029163238.png]]
+![Pasted image 20261029163238](../../../../Images/Pasted%20image%2020261029163238.png)
 
 ```
 - in this lab we have a hint.
 ```
 
-![[Pasted image 20261029164016.png]]
+![Pasted image 20261029164016](../../../../Images/Pasted%20image%2020261029164016.png)
 
 ```
 The clue tells us to filter all the system services that are running and inspect that app’s security to find misconfiguration, overly permissive rules, and paths the profile allows.
@@ -223,7 +223,7 @@ chmod +x /dev/shm/test.pl
 /dev/shm/test.pl**
 ```
 
-![[Pasted image 20261029165627.png]]
+![Pasted image 20261029165627](../../../../Images/Pasted%20image%2020261029165627.png)
 
 ```
 - This helped me to gain root access and get the root file.

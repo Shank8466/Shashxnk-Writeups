@@ -33,13 +33,13 @@ Navigate to the following URL using the AttackBox://10.49.147.144 and find the f
 - So again i captured one request with parameter and changed the parameter to - "../../../etc/passwd".
 ```
 
-![[Pasted image 20261016195539.png]]
+![Pasted image 20261016195539](../../../../Images/Pasted%20image%2020261016195539.png)
 
-![[Pasted image 20261016200005.png]]
+![Pasted image 20261016200005](../../../../Images/Pasted%20image%2020261016200005.png)
 
-![[Pasted image 20261016200021.png]]
+![Pasted image 20261016200021](../../../../Images/Pasted%20image%2020261016200021.png)
 
-![[Pasted image 20261016200332.png]]
+![Pasted image 20261016200332](../../../../Images/Pasted%20image%2020261016200332.png)
 
 ```
 - So its confirmed that there is LFI and we got /etc/passwd now i changed this value to "/flag.txt".
