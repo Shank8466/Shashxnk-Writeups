@@ -16,8 +16,7 @@ This repository documents my journey in offensive security, focusing on understa
 │   ├── tryhackme/       # CTFs, machines & room walkthroughs
 │   ├── portswigger/     # Web application security labs
 │   └── htb/             # Hack The Box machine writeups
-│
-├── scripts/             # Custom security tools & automation
+│           
 │
 └── README.md
 ```
