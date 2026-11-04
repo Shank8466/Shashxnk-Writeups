@@ -50,8 +50,6 @@ I aim to document every challenge using a structured penetration testing methodo
 4. **Exploitation** – Validate vulnerabilities in authorized lab environments.
 5. **Privilege Escalation** – Investigate opportunities for elevated access.
 6. **Post-Exploitation** – Understand the impact and scope of the compromise.
-7. **Remediation** – Document appropriate mitigation strategies.
-8. **Key Takeaways** – Record technical lessons and areas for improvement.
 
 ## ⭐ Featured Writeups
 
@@ -69,13 +67,11 @@ A selection of my most interesting technical investigations:
 
 **Reconnaissance:** Nmap, Amass, Subfinder, httpx, Gobuster, ffuf
 
-**Web Security:** Burp Suite, OWASP ZAP
+**Web Security:** Burp Suite
 
 **Network Analysis:** Wireshark, Netcat
 
 **Exploitation & Testing:** Metasploit, Nuclei
-
-**Reverse Engineering:** Ghidra
 
 **Programming:** Python, C/C++
 
